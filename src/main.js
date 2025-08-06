@@ -1,2 +1,2 @@
 
-console.log("It's a trap !");
+import './styles/main.scss';
