@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+	
+  
+	<title id="title">Smash Up Drafter Icon</title>
+	
+  
+	<desc id="desc">Icon representing a card standing upright with two tilted cards behind it</desc>
+	
+  
+	<rect x="16" y="8" width="32" height="48" rx="4" fill="#F9F7F3" stroke="#1E1E1E" stroke-width="2"/>
+	
+  
+	<rect x="12" y="4" width="32" height="48" rx="4" fill="#9C27B0" fill-opacity="0.15" stroke="#9C27B0" stroke-width="2" transform="rotate(-8 28 28)"/>
+	
+  
+	<rect x="20" y="2" width="32" height="48" rx="4" fill="#4CAF50" fill-opacity="0.15" stroke="#4CAF50" stroke-width="2" transform="rotate(8 36 26)"/>
+	
+
+</svg>
