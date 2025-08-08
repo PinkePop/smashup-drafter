@@ -1,0 +1,52 @@
+@use '../utils/variables';
+@use '../utils/media-queries';
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variables.$color-bg-light;
+    color: variables.$color-text-main;
+    min-height: 56px;
+
+    @include media-queries.spacing(padding-left, md);
+    @include media-queries.spacing(padding-right, md);
+    @include media-queries.shadow(sm);
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+
+        svg {
+            height: 32px;
+            width: auto;
+        }
+    }
+
+    >div {
+        display: flex;
+        gap: variables.$spacing-sm;
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        width: 44px;
+        height: 44px;
+        padding: variables.$spacing-xs;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            color: variables.$color-accent-purple;
+        }
+
+    }
+}

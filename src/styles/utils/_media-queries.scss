@@ -1,0 +1,81 @@
+@use './variables';
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint ==sm {
+    @media (min-width: variables.$breakpoint-sm) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==md {
+    @media (min-width: variables.$breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==lg {
+    @media (min-width: variables.$breakpoint-lg) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==xl {
+    @media (min-width: variables.$breakpoint-xl) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Unknown breakpoint: `#{$breakpoint}`.";
+  }
+}
+
+@mixin spacing($property, $size) {
+  @if $size ==xs {
+    #{$property}: variables.$spacing-xs;
+  }
+
+  @else if $size ==sm {
+    #{$property}: variables.$spacing-sm;
+  }
+
+  @else if $size ==md {
+    #{$property}: variables.$spacing-md;
+  }
+
+  @else if $size ==lg {
+    #{$property}: variables.$spacing-lg;
+  }
+
+  @else if $size ==xl {
+    #{$property}: variables.$spacing-xl;
+  }
+
+  @else {
+    @warn "Unknown spacing: #{$size}";
+  }
+}
+
+
+@mixin border-radius($size) {
+  $value: map-get(variables, border-radius-#{$size});
+  border-radius: $value;
+}
+
+@mixin shadow($size) {
+  @if $size ==sm {
+    box-shadow: variables.$shadow-sm;
+  }
+
+  @else if $size ==md {
+    box-shadow: variables.$shadow-md;
+  }
+
+  @else if $size ==lg {
+    box-shadow: variables.$shadow-lg;
+  }
+
+  @else {
+    @warn "Unknown shadow: #{$size}";
+  }
+}

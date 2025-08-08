@@ -1,0 +1,55 @@
+@use '../utils/variables';
+@use '../utils/media-queries';
+
+footer {
+    background-color: variables.$color-bg-light;
+    color: variables.$color-text-muted;
+    padding-top: variables.$spacing-lg;
+    padding-bottom: variables.$spacing-lg;
+    text-align: center;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    @include media-queries.respond-to(md) {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        max-width: 640px;
+        margin: 0 auto;
+        padding-left: variables.$spacing-md;
+        padding-right: variables.$spacing-md;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: variables.$color-accent-purple;
+            }
+        }
+
+        .ecoindex-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: variables.$spacing-sm;
+
+            #ecoindex-badge {
+                display: inline-block;
+
+                iframe,
+                img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+[data-theme='dark'] footer {
+    background-color: variables.$color-bg-dark;
+}

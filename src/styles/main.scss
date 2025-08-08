@@ -1,50 +1,9 @@
-@use "@picocss/pico/scss/pico" with (
-  $enable-semantic-container: true,
-  $enable-classes: false,
-  $modules: (
-    "content/code": false,
-    "forms/input-color": false,
-    "forms/input-date": false,
-    "forms/input-file": false,
-    "forms/input-range": false,
-    "forms/input-search": false,
-    "components/accordion": false,
-    "components/card": false,
-    "components/dropdown": false,
-    "components/loading": false,
-    "components/modal": false,
-    "components/nav": true,
-    "components/progress": false,
-    "components/tooltip": false,
-    "utilities/accessibility": false,
-    "utilities/reduce-motion": false
-  )
-);
+@use "base/reset";
+@use "base/layout";
 
-html,
-body {
-    height: 100%;
-}
+@use "components/header";
+@use "components/steps";
+@use "components/footer";
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-button[type=button] {
-    background-color: #A7B8C3;
-    border: none;
-    box-shadow: none;
-}
+@use "utils/variables";
+@use "utils/media-queries";

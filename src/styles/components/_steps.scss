@@ -1,0 +1,143 @@
+@use "sass:color";
+@use '../utils/variables';
+@use '../utils/media-queries';
+
+.steps-section {
+  margin-top: variables.$spacing-xl;
+
+  .steps-container {
+    max-width: 960px;
+    margin-inline: auto;
+    padding-inline: variables.$spacing-md;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: variables.$spacing-lg;
+  }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-xl;
+
+    @include media-queries.respond-to(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    li {
+      flex: 1;
+
+      .step-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: variables.$spacing-sm;
+      }
+
+      .step-icon {
+        width: 48px;
+        height: 48px;
+
+        svg,
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+        max-width: 40ch;
+
+        a {
+          color: variables.$color-accent-purple;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: variables.$color-accent-green;
+          }
+        }
+      }
+    }
+  }
+
+  .cta {
+    text-align: center;
+    margin-top: variables.$spacing-lg;
+
+    .primary {
+      padding: variables.$spacing-sm variables.$spacing-md;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: variables.$border-radius-md;
+      background-color: variables.$color-accent-purple;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background-color: color.adjust(variables.$color-accent-purple, $lightness: -10%);
+      }
+    }
+  }
+}
+
+.how-it-works {
+  margin-top: variables.$spacing-xl;
+  max-width: 640px;
+  margin-inline: auto;
+  padding-inline: variables.$spacing-md;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: variables.$spacing-md;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: variables.$spacing-sm;
+    line-height: 1.5;
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+}
+
+.intro {
+  margin-top: variables.$spacing-xl;
+  text-align: center;
+
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: variables.$spacing-md;
+    padding-right: variables.$spacing-md;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: variables.$spacing-sm;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: variables.$color-text-muted;
+  }
+}
