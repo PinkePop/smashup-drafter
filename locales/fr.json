@@ -1,0 +1,15 @@
+{
+    "intro.h1": "Bienvenue sur Smash Up Drafter",
+    "intro.p": "Simple et Rapide : sélectionnez vos sets et commencez le draft !",
+    "sub.h2": "Pour Commencer",
+    "step-one.h3": "Sélectionnez vos Sets",
+    "step-one.span": "Choisissez tous les sets que vous possédez",
+    "step-one.a": "(ouvrez les paramètres)",
+    "step-two.h3": "Lancez le Draft",
+    "step-two.p": "Cliquez sur « Draft » pour obtenir votre sélection de factions.",
+    "step-three.p": "Votre draft est prêt — à vous de choisir et de jouer !",
+    "sub-two.h2": "Comment Marche le Draft",
+    "p-one.p": "Le draft se base uniquement sur les sets que vous avez indiqués comme possédés.",
+    "p-two.p": "Chaque joueur reçoit une faction, puis choisit la deuxième parmi celles restantes.",
+    "p-three.p": "Pour drafter, vous devez posséder au moins un set de base (et pas seulement des extensions)."
+}

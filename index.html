@@ -9,7 +9,7 @@
     content="Smash Up Drafter is a web application designed to help organize your drafts for the Smash Up board game.">
   <meta name="author" content="PinkePop (https://github.com/PinkePop)" />
   <title>Smash Up Drafter</title>
-  <script type="module" crossorigin src="/assets/index-C3Yi1_Uw.js"></script>
+  <script type="module" crossorigin src="/assets/index-BYpIjT-z.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-CYZiBV2P.css">
 </head>
 
@@ -30,7 +30,7 @@
       </a>
 
       <div>
-        <button id="settings-button" aria-label="Open settings" title="Settings">
+        <button type="button" id="settings-button" aria-label="Open settings" title="Settings">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g class="oi-settings">
               <path class="oi-vector"
@@ -43,31 +43,7 @@
           </svg>
         </button>
 
-        <button id="theme-toggle-button" aria-label="Toggle light/dark mode" title="Toggle theme">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g class="oi-sun">
-              <circle class="oi-ellipse" cx="12" cy="12" r="5" stroke="#000000" stroke-width="1.5"
-                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M12 20V21" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M12 3V4" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M6.34314 17.6569L5.63603 18.364" stroke="#000000" stroke-width="1.5"
-                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M18.364 5.63605L17.6569 6.34315" stroke="#000000" stroke-width="1.5"
-                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M4 12L3 12" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M21 12L20 12" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M6.34314 6.34314L5.63603 5.63603" stroke="#000000" stroke-width="1.5"
-                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path class="oi-line" d="M18.364 18.364L17.6569 17.6568" stroke="#000000" stroke-width="1.5"
-                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </button>
-        <button id="lang-toggle-button" aria-label="Switch language" title="Switch language">
+        <button type="button" id="lang-toggle-button" aria-label="Switch language" title="Switch language">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g class="oi-globe">
               <circle class="oi-ellipse" cx="12" cy="12" r="9" stroke="#000000" stroke-width="1.5" />
@@ -84,14 +60,14 @@
 
     <div class="intro">
       <div class="container">
-        <h1>Welcome to Smash Up Drafter</h1>
-        <p>Quick and easy: mark the products you own and start drafting!</p>
+        <h1 data-lang="intro.h1">Welcome to Smash Up Drafter</h1>
+        <p data-lang="intro.p">Fast and Simple: pick the sets you own and start drafting!</p>
       </div>
     </div>
 
     <section class="steps-section">
       <div class="steps-container">
-        <h2>Getting Started</h2>
+        <h2 data-lang="sub.h2">Getting Started</h2>
 
         <ol class="steps">
           <li>
@@ -106,10 +82,10 @@
                 </svg>
               </div>
               <div>
-                <h3>List Your Products</h3>
+                <h3 data-lang="step-one.h3">Select Your Sets</h3>
                 <p>
-                  Start by entering all the items you currently have
-                  <a href="#" id="open-settings-link">(open settings)</a>.
+                  <span data-lang="step-one.span">Choose all the sets you currently own</span>
+                  <a href="#" id="open-settings-link" data-lang="step-one.a">(open settings)</a>.
                 </p>
               </div>
             </div>
@@ -131,8 +107,8 @@
                 </svg>
               </div>
               <div>
-                <h3>Generate Your Draft</h3>
-                <p>Click the “Draft” button to create your personalized selection.</p>
+                <h3 data-lang="step-two.h3">Build Your Draft</h3>
+                <p data-lang="step-two.p">Hit “Draft” to get your faction selection.</p>
               </div>
             </div>
           </li>
@@ -161,8 +137,8 @@
                 </svg>
               </div>
               <div>
-                <h3>Play and Have Fun!</h3>
-                <p>Your draft is ready — now it’s time to play and enjoy the game!</p>
+                <h3 data-lang="step-three.h3">Play and Smash!</h3>
+                <p data-lang="step-three.p">Your draft is ready — time to battle and have fun!</p>
               </div>
             </div>
           </li>
@@ -175,10 +151,10 @@
     </section>
 
     <section class="how-it-works">
-      <h2>How the Draft Works</h2>
-      <p>The draft is generated based on the products you've marked as owned...</p>
-      <p>Each player gets one faction, then chooses a second among the remaining ones.</p>
-      <p>To use the draft, you must own at least one base product (not just expansions).</p>
+      <h2 data-lang="sub-two.h2">How Drafting Works</h2>
+      <p data-lang="p-one.p">The draft is based only on the sets you’ve marked as owned.</p>
+      <p data-lang="p-two.p">Each player gets one faction, then picks a second from the remaining ones.</p>
+      <p data-lang="p-three.p">To draft, you need at least one core set (not only expansions).</p>
     </section>
 
   </main>
