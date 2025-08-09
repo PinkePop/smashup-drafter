@@ -1,0 +1,15 @@
+{
+    "intro.h1": "Welcome to Smash Up Drafter",
+    "intro.p": "Fast and Simple: pick the sets you own and start drafting!",
+    "sub.h2": "Getting Started",
+    "step-one.h3": "Select Your Sets",
+    "step-one.span": "Choose all the sets you currently own.",
+    "step-one.a": "(open settings)",
+    "step-two.h3": "Build Your Draft",
+    "step-two.p": "Hit “Draft” to get your faction selection.",
+    "step-three.p": "Your draft is ready — time to battle and have fun!",
+    "sub-two.h2": "How Drafting Works",
+    "p-one.p": "The draft is based only on the sets you’ve marked as owned.",
+    "p-two.p": "Each player gets one faction, then picks a second from the remaining ones.",
+    "p-three.p": "To draft, you need at least one core set (not only expansions)."
+}
