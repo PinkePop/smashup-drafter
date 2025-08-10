@@ -169,6 +169,30 @@
     </div>
   </footer>
 
+  <dialog id="settings-modal" aria-labelledby="settings-title">
+    <article>
+      <header>
+        <h2 id="settings-title">Settings</h2>
+        <button type="button" class="icon-button" data-close aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="content">
+        <p>Pick the sets you own to enable factions in the draft.</p>
+        <div id="products-root"></div>
+      </div>
+
+      <footer>
+        <button type="button" class="secondary" data-close>Cancel</button>
+        <button type="button" class="primary" id="save-settings">Save</button>
+      </footer>
+    </article>
+  </dialog>
+
+
   <script type="module" src="/src/main.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>
 </body>

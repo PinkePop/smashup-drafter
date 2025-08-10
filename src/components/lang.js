@@ -1,7 +1,8 @@
-export const initLangage = async () => {
+export const initLangage = async (defaultLoading) => {
 
     const lang = localStorage.getItem('lang');
-    const new_lang = (lang === 'en' ? 'fr' : 'en');
+
+    const new_lang = (defaultLoading ? lang : (lang === 'en' ? 'fr' : 'en'));
 
     document.documentElement.setAttribute('lang', new_lang);
 
