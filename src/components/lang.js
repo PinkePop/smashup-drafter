@@ -1,3 +1,5 @@
+import { restoreSets } from "./sets.js";
+
 export const initLangage = async (defaultLoading) => {
 
     const lang = localStorage.getItem('lang');
@@ -7,6 +9,8 @@ export const initLangage = async (defaultLoading) => {
     document.documentElement.setAttribute('lang', new_lang);
 
     await setLangage(new_lang);
+
+    restoreSets();
 };
 
 const setLangage = async (lang) => {
