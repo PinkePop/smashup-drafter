@@ -4,7 +4,6 @@ export const initSetsList = () => {
 
     const lang = localStorage.getItem('lang') ?? 'en';
     const setsContainer = document.getElementById('sets-root');
-    const modalSaveButton = document.getElementById('save-settings');
 
     [...setsContainer.children].forEach(child => {
         if (child.tagName.toLowerCase() !== 'legend') child.remove();
