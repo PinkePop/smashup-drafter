@@ -11,5 +11,9 @@
     "sub-two.h2": "Comment Marche le Draft",
     "p-one.p": "Le draft se base uniquement sur les sets que vous avez indiqués comme possédés.",
     "p-two.p": "Chaque joueur reçoit une faction, puis choisit la deuxième parmi celles restantes.",
-    "p-three.p": "Pour drafter, vous devez posséder au moins un set de base (et pas seulement des extensions)."
+    "p-three.p": "Pour drafter, vous devez posséder au moins un set de base (et pas seulement des extensions).",
+    "modal.h2": "Paramètres",
+    "modal.legend": "Sélectionnez les sets que vous possédés pour intégrer les factions associées dans le draft.",
+    "modal.close": "Fermer",
+    "modal.save": "Sauvegarder"
 }

@@ -9,8 +9,8 @@
     content="Smash Up Drafter is a web application designed to help organize your drafts for the Smash Up board game.">
   <meta name="author" content="PinkePop (https://github.com/PinkePop)" />
   <title>Smash Up Drafter</title>
-  <script type="module" crossorigin src="/assets/index-DxXlpJGi.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BdYvNW0Q.css">
+  <script type="module" crossorigin src="/assets/index-BdsdnX0v.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CTs7b0Or.css">
 </head>
 
 <body>
@@ -145,7 +145,7 @@
         </ol>
 
         <p class="cta">
-          <button class="primary">Draft!</button>
+          <button id="btn-draft" class="primary">Draft!</button>
         </p>
       </div>
     </section>
@@ -156,6 +156,23 @@
       <p data-lang="p-two.p">Each player gets one faction, then picks a second from the remaining ones.</p>
       <p data-lang="p-three.p">To draft, you need at least one core set (not only expansions).</p>
     </section>
+
+    <section id="draft-area" hidden aria-live="polite">
+      <h2>Draft</h2>
+      <div id="draft-players">
+        <section id="p1-pack" aria-labelledby="p1-title">
+          <h3 id="p1-title">Player 1</h3>
+          <div class="imposed"></div>
+          <ul class="options"></ul>
+        </section>
+        <section id="p2-pack" aria-labelledby="p2-title">
+          <h3 id="p2-title">Player 2</h3>
+          <div class="imposed"></div>
+          <ul class="options"></ul>
+        </section>
+      </div>
+    </section>
+
 
   </main>
 
@@ -174,7 +191,7 @@
   <dialog id="settings-modal" aria-labelledby="settings-title">
     <article>
       <header>
-        <h2 id="settings-title">Settings</h2>
+        <h2 id="settings-title" data-lang="modal.h2">Settings</h2>
         <button type="button" class="icon-button" data-close aria-label="Close">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -184,13 +201,13 @@
 
       <div class="content">
         <fieldset id="sets-root">
-          <legend>Pick the sets you own to enable factions in the draft.</legend>
+          <legend data-lang="modal.legend">Pick the sets you own to enable factions in the draft.</legend>
         </fieldset>
       </div>
 
       <footer>
-        <button type="button" class="secondary" data-close>Cancel</button>
-        <button type="button" class="primary" id="save-settings">Save</button>
+        <button type="button" class="secondary" data-lang="modal.close" data-close>Cancel</button>
+        <button type="button" class="primary" id="save-settings" data-lang="modal.save">Save</button>
       </footer>
     </article>
   </dialog>

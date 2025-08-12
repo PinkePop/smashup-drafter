@@ -11,5 +11,9 @@
     "sub-two.h2": "How Drafting Works",
     "p-one.p": "The draft is based only on the sets you’ve marked as owned.",
     "p-two.p": "Each player gets one faction, then picks a second from the remaining ones.",
-    "p-three.p": "To draft, you need at least one core set (not only expansions)."
+    "p-three.p": "To draft, you need at least one core set (not only expansions).",
+    "modal.h2": "Settings",
+    "modal.legend": "Pick the sets you own to enable factions in the draft.",
+    "modal.close": "Close",
+    "modal.save": "Save"
 }
