@@ -4,6 +4,7 @@ export const initSetsList = () => {
 
     const lang = localStorage.getItem('lang') ?? 'en';
     const setsContainer = document.getElementById('sets-root');
+    const modalSaveButton = document.getElementById('save-settings');
 
     [...setsContainer.children].forEach(child => {
         if (child.tagName.toLowerCase() !== 'legend') child.remove();
@@ -24,22 +25,7 @@ export const restoreSets = () => {
     });
 }
 
-const getSetElement = (set, lang) => {
-    const setLabel = document.createElement('label');
-    const setInput = document.createElement('input');
-
-    setInput.type = 'checkbox';
-    setInput.id = set.id;
-    setInput.name = 'sets';
-    setInput.addEventListener('change', updateSetOwnedStatus);
-
-    setLabel.appendChild(setInput);
-    setLabel.append(set.name?.[lang]);
-
-    return setLabel;
-}
-
-const updateSetOwnedStatus = () => {
+export const updateSetOwnedStatus = () => {
 
     const sets = document.getElementsByName('sets');
     const ownedSets = [];
@@ -51,6 +37,20 @@ const updateSetOwnedStatus = () => {
     });
 
     localStorage.setItem('ownedSets', JSON.stringify(ownedSets));
+}
+
+const getSetElement = (set, lang) => {
+    const setLabel = document.createElement('label');
+    const setInput = document.createElement('input');
+
+    setInput.type = 'checkbox';
+    setInput.id = set.id;
+    setInput.name = 'sets';
+
+    setLabel.appendChild(setInput);
+    setLabel.append(set.name?.[lang]);
+
+    return setLabel;
 }
 
 const getSetsDatas = (lang) => {

@@ -1,5 +1,6 @@
+import { restoreSets, updateSetOwnedStatus } from "./sets.js";
+
 export function initModal({ modalId, openButtonId }) {
-    
     const modal = document.getElementById(modalId);
     const openBtn = document.getElementById(openButtonId);
 
@@ -13,7 +14,17 @@ export function initModal({ modalId, openButtonId }) {
     };
 
     const closeModal = () => {
-        if (modal.open) modal.close();
+        if (modal.open) {
+            restoreSets();
+            modal.close();
+        }
+    };
+
+    const saveAndCloseModal = () => {
+        if (modal.open) {
+            updateSetOwnedStatus();
+            modal.close();
+        }
     };
 
     openBtn.addEventListener('click', openModal);
@@ -34,16 +45,21 @@ export function initModal({ modalId, openButtonId }) {
         if (!isInDialog) closeModal();
     });
 
-    const saveBtn = modal.querySelector('#save-settings');
+    modal.addEventListener('cancel', (e) => {
+        e.preventDefault();
+        closeModal();
+    });
 
+    const saveBtn = modal.querySelector('#save-settings');
     if (saveBtn) {
         saveBtn.addEventListener('click', async () => {
             saveBtn.disabled = true;
             try {
-                closeModal();
+                saveAndCloseModal();
             } finally {
                 saveBtn.disabled = false;
             }
         });
     }
 }
+
